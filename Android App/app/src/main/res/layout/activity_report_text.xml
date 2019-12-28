@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/liteblue"
+    tools:context=".ReportText">
+
+
+    <ImageView
+        android:id="@+id/logoimagereport"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/backlogo" />
+
+    <LinearLayout
+        android:id="@+id/reportlinear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoimagereport"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:text="Report: #"
+
+            android:textColor="@color/logocolor"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/RecordID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="47" />
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/reportlinear1">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/reportlinear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logoimagereport"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/doctoridText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Doctor ID: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/doctoridGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ID" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logoimagereport"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/doctorNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Doctor Name: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/doctornameGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name Place Holder" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logoimagereport"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rpcreatedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Report Created: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/reportcreatedGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Report Created" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logoimagereport"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/spText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Site Pain: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/sitepainGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Site Pain" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logoimagereport"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/psText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Pain Severity: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/painseverityGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pain Severity" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logoimagereport"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pcText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Pain Character: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/paincharacterGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pain Character" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logoimagereport"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ppText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Pain Pattern: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/painpatternGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pain Pattern" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sbText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Site Bleed: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/sitebleedGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Site Bleed" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Bleed Severity: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/bleedseverityGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bleed Severity" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/symptomsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Symptoms: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/symptomsGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Symptoms" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/diagnosisText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Diagnosis: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/diagnosisGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Diagnosis" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/BloodTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Blood Test: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/bloodtestGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Test Results" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pscanText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Patient Scans: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/pScansGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Scans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/dtText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Department Transfer: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/deprtTransferGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Transfer" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportlinear14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/patientmediText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Patient Medication: "
+                    android:textColor="@color/logocolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/pMedicationGet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Medication" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

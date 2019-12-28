@@ -1,0 +1,364 @@
+<!--
+  ~ Copyright (c) 2019.
+  ~ MAJD SHATAT (5664913) - RECOHEALTH
+  ~
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RecoHealth - Your Profile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/doctor.css">
+
+    <script src="_js/core.js"></script>
+    <script src="_js/doctor.js"></script>
+
+</head>
+<body>
+
+<nav
+        class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+        id="ftco-navbar"
+>
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><span>Reco</span>Health</a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#ftco-nav"
+                aria-controls="ftco-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a href="doctor.html" class="nav-link">Your Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="add_record.html" class="nav-link">Add Record</a>
+                </li>
+                <li class="nav-item">
+                    <a href="added_records.html" class="nav-link">Added Records</a>
+                </li>
+                <li class="nav-item">
+                    <a href="added_records.html?shared=true" class="nav-link">Shared Records</a>
+                </li>
+                <li class="nav-item cta">
+                    <a href="index.html" class="nav-link"><span>Sign Out</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END nav -->
+
+
+<table id="info">
+
+    <tr>
+        <th colspan="2">Doctor Information</th>
+    </tr>
+    <tr>
+        <td class="field">ID</td>
+        <td id="doctorId"></td>
+    </tr>
+    <tr>
+        <td class="field">First Name</td>
+        <td id="firstName"></td>
+    </tr>
+    <tr>
+        <td class="field">Last Name</td>
+        <td id="lastName"></td>
+    </tr>
+
+    <tr>
+        <td class="field">Gender</td>
+        <td id="gender"></td>
+    </tr>
+
+    <tr>
+        <td class="field">Mobile</td>
+        <td id="mobile"></td>
+    </tr>
+
+    <tr>
+        <td class="field">Email</td>
+        <td id="emailAddress"></td>
+    </tr>
+
+    <tr>
+        <td class="field">Department</td>
+        <td id="department"></td>
+    </tr>
+
+    <tr>
+        <td class="field">Position</td>
+        <td id="position"></td>
+    </tr>
+
+    <!--  ADDRESS  -->
+    <tr>
+        <th colspan="2">Doctor Address</th>
+    </tr>
+    <tr>
+        <td class="field">Country</td>
+        <td id="country"></td>
+    </tr>
+    <tr>
+        <td class="field">City</td>
+        <td id="city"></td>
+    </tr>
+    <tr>
+        <td class="field">Zip Code</td>
+        <td id="zipCode"></td>
+    </tr>
+
+    <tr>
+        <td class="field">Street</td>
+        <td id="street"></td>
+    </tr>
+
+    <!--  HOSPITAL  -->
+    <tr>
+        <th colspan="2">Hospital</th>
+    </tr>
+    <tr>
+        <td class="field">Name</td>
+        <td id="hospitalName"></td>
+    </tr>
+    <tr>
+        <td class="field">Number</td>
+        <td id="hospContactNum"></td>
+    </tr>
+    <tr>
+        <td class="field">Alternative Number</td>
+        <td id="hospAltContactNum"></td>
+    </tr>
+
+    <tr>
+        <td class="field">Email</td>
+        <td id="contactEmailAddress"></td>
+    </tr>
+
+
+    <tr>
+        <td class="field">Manager</td>
+        <td id="hospManager"></td>
+    </tr>
+
+
+    <tr>
+        <td class="field">Manager Email</td>
+        <td id="hospManagerEmail"></td>
+    </tr>
+
+
+    <tr>
+        <td class="field">Manager Mobile</td>
+        <td id="hospManagerContact"></td>
+    </tr>
+
+
+</table>
+
+
+<!--Doctor Details-->
+<!--<section style="margin-bottom:40px;">-->
+<!--    <div style="background-color:#39345a;">-->
+<!--        <h4 style="color:white ;margin-left:20px">Doctor Details</h4>-->
+<!--    </div>-->
+
+<!--    <div style="margin:30px;">-->
+<!--        <label style="display: block;">Doctor ID: <input type="text" disabled/> </label>-->
+<!--    </div>-->
+<!--    <div style="margin:30px;">-->
+<!--        <label style="display: block;">First Name: <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;">Last Name: <input type="text" disabled/> </label>-->
+<!--        <br>-->
+<!--        <label style="display: block;">Gender: <input type="text" disabled/> </label>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--<section style="margin-bottom:40px;">-->
+<!--    <div style="background-color:#39345a;">-->
+<!--        <h4 style="color:white ;margin-left:20px">Doctor Contact Information</h4>-->
+<!--    </div>-->
+
+<!--    <div style="margin:30px;">-->
+<!--        <h5 style="display: block;">Address</h5>-->
+<!--        <label style="display: block;">Street <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> City <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Country <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Zip Code <input type="text" disabled/> </label>-->
+<!--        <br>-->
+<!--        <h5 style="display: block;">Reach Out Information</h5>-->
+<!--        <label style="display: block;"> Mobile Number <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Email Address <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Department <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Position <input type="text" disabled/> </label>-->
+<!--    </div>-->
+<!--    <div style="background-color:#39345a;">-->
+<!--        <h4 style="color:white ;margin-left:20px">Hospital Information</h4>-->
+<!--    </div>-->
+
+<!--    <div style="margin:30px;">-->
+<!--        <label style="display: block;">Hospital ID: <input type="text" disabled/> </label>-->
+
+
+<!--        <label style="display: block;">Hospital Name: <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Hospital Registration Number: <input type="text" disabled/> </label>-->
+<!--        <br>-->
+<!--        <h5 style="display: block;">Address</h5>-->
+<!--        <label style="display: block;">Street <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> City <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Country <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Zip Code <input type="text" disabled/> </label>-->
+<!--    </div>-->
+
+<!--    <div style="background-color:#39345a;">-->
+<!--        <h4 style="color:white ;margin-left:20px">Hospital Contact Information</h4>-->
+<!--    </div>-->
+<!--    <div style="margin:30px;">-->
+<!--        <label style="display: block;"> Hospital Contact Number <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Alternative Contact Number <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Hospital Email Address <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Hospital Manager <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Manager Email <input type="text" disabled/> </label>-->
+<!--        <label style="display: block;"> Manager Mobile Number <input type="text" disabled/> </label>-->
+<!--    </div>-->
+<!--</section>-->
+<!--END DOCTOR DETIALS -->
+
+
+<!--footer-->
+<footer
+        class="ftco-footer ftco-bg-dark ftco-section img"
+        style="background-image: url(images/bg_5.jpg);padding: 25px;padding-bottom: 0;"
+>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row mb-5" style="margin: 0 !important;">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">RecoHealth</h2>
+                    <p>Your Privacy, Our Priority</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Site Links</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="py-2 d-block">Home</a></li>
+                        <li><a href="#" class="py-2 d-block">About Us</a></li>
+                        <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Have a Questions?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li>
+                    <span class="icon icon-map-marker"></span
+                    ><span class="text"
+                            >Block 5, Al Burooj Street, Al Soufouh, Dubai</span
+                            >
+                            </li>
+                            <li>
+                                <a href="#"
+                                ><span class="icon icon-phone"></span
+                                ><span class="text">+971 58 596 5669</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href="#"
+                                ><span class="icon icon-envelope"></span
+                                ><span class="text">mfawazsiddiqi@gmail.com</span></a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center"></div>
+        </div>
+    </div>
+</footer>
+<!--end of footer-->
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle
+                class="path-bg"
+                cx="24"
+                cy="24"
+                r="22"
+                fill="none"
+                stroke-width="4"
+                stroke="#eeeeee"
+        />
+        <circle
+                class="path"
+                cx="24"
+                cy="24"
+                r="22"
+                fill="none"
+                stroke-width="4"
+                stroke-miterlimit="10"
+                stroke="#F96D00"
+        />
+    </svg>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

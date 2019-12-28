@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RecoHealth - Add Record for Patient</title>
+    <meta charset="utf-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"
+            rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/magnific-popup.css"/>
+
+    <link rel="stylesheet" href="css/aos.css"/>
+
+    <link rel="stylesheet" href="css/ionicons.min.css"/>
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css"/>
+    <link rel="stylesheet" href="css/jquery.timepicker.css"/>
+
+    <link rel="stylesheet" href="css/flaticon.css"/>
+    <link rel="stylesheet" href="css/icomoon.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="./css/chosen.min.css"/>
+
+    <script src="_js/core.js"></script>
+    <script src="_js/api.js"></script>
+    <script src="_js/add_record.js"></script>
+
+</head>
+<body>
+<nav
+        class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+        id="ftco-navbar"
+>
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><span>Reco</span>Health</a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#ftco-nav"
+                aria-controls="ftco-nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="doctor.html" class="nav-link">Your Profile</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="add_record.html" class="nav-link">Add Record</a>
+                </li>
+                <li class="nav-item">
+                    <a href="added_records.html" class="nav-link">Added Records</a>
+                </li>
+                <li class="nav-item">
+                    <a href="added_records.html?shared=true" class="nav-link">Shared Records</a>
+                </li>
+                <li class="nav-item cta">
+                    <a href="index.html" class="nav-link"><span>Sign Out</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END nav -->
+
+<!--Record Details-->
+<section style="margin-bottom:40px;">
+    <div style="background-color:#39345a;">
+        <h4 style="color:white ;margin-left:20px">Record Details:</h4>
+    </div>
+    <div style="margin:20px;">
+        <label style="display: block;">Patient ID: </label>
+        <input type="text" id="patientId"/>
+    </div>
+</section>
+<!--end of record details-->
+
+<!--ilness Details-->
+<section>
+    <div style="background-color:#39345a">
+        <h4 style="color:white ;margin-left:20px">Illness Details:</h4>
+    </div>
+
+    <div style="margin:20px;">
+        <label style="display: block;">Date of Onset: </label>
+        <input type="date" id="onsetDate"/>
+
+        <label style="display: block;">Events Leading to Illness:</label>
+        <textarea class="form-control" rows="2" id="illnessCause"></textarea>
+    </div>
+</section>
+<!--end of illness details-->
+
+<!--Signs-->
+<section>
+    <div style="background-color:#39345a">
+        <h4 style="color:white ;margin-left:20px">Signs:</h4>
+    </div>
+
+    <div style="margin:20px;">
+        <h4 style="display: block;">Pain</h4>
+        <div style="margin-left: 20px;" class="row">
+            <div class="col">
+                <label style="display: block;margin-bottom: 0;">Sites: </label>
+                <select class="sitesDropDown" id="painArea">
+                    <option>Select</option>
+                    <option> abdomen</option>
+                    <option> adenoids</option>
+                    <option>ankle</option>
+                    <option>arm</option>
+                    <option>back</option>
+                    <option>belly</option>
+                    <option>blood</option>
+                    <option>brain</option>
+                    <option>breast</option>
+                    <option>chest</option>
+                    <option>circulatory system</option>
+                    <option>collar bone</option>
+                    <option>digestive system</option>
+                    <option>ear
+                    </option
+                    >
+                    <option>elbow</option>
+                    <option>endocrine system</option>
+                    <option>eye</option>
+                    <option>face</option>
+                    <option>feet</option>
+                    <option>finger</option>
+                    <option>foot
+                    </option
+                    >
+                    <option>hand</option>
+                    <option>head</option>
+                    <option>heart</option>
+                    <option>immune system</option>
+                    <option>kidney</option>
+                    <option>leg</option>
+                    <option>lungs</option>
+                    <option>liver</option>
+                    <option>neck</option>
+                    <option>nerves</option>
+                    <option>pancreas</option>
+                    <option>respiratory system</option>
+                    <option>shoulder</option>
+                    <option>spinal cord</option>
+                    <option>skull</option>
+                    <option>skin</option>
+                    <option>stomach</option>
+                    <option>tongue</option>
+                    <option>urinary system</option>
+                    <option>uterus</option>
+                    <option>wrist</option>
+                </select>
+            </div>
+            <div class="col">
+                <label style="display: block;margin-bottom: 0;">Severity: </label>
+                <select class="sitesDropDown" id="painSeverity">
+                    <option>Select</option>
+                    <option> Mild</option>
+                    <option> Moderate</option>
+                    <option>Severe</option>
+                </select>
+            </div>
+            <div class="col">
+                <label style="display: block;margin-bottom: 0;"
+                >Pain Character:
+                </label>
+                <select class="sitesDropDown" id="painCharacter">
+                    <option>Select</option>
+                    <option> Sharp</option>
+                    <option> Cramping</option>
+                    <option>Aching</option>
+                    <option>Throbbing</option>
+                    <option>Acute pain</option>
+                    <option>Chronic pain</option>
+                    <option>Neuropathic</option>
+                    <option>Visceral pain</option>
+                    <option>Breakthrough</option>
+                </select>
+            </div>
+            <div class="col">
+                <label style="display: block;margin-bottom: 0;">Pattern: </label>
+                <select class="sitesDropDown" id="painPattern">
+                    <option> Select</option>
+                    <option> Constant</option>
+                    <option> Variable</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin:20px;">
+        <h4 style="display: block;">Bleeding</h4>
+        <div style="margin-left: 20px;" class="row">
+            <div class="col">
+                <label style="display: block;margin-bottom: 0;">Sites: </label>
+                <select class="sitesDropDown" id="bleedingArea">
+                    <option>Select</option>
+                    <option> abdomen</option>
+                    <option> adenoids</option>
+                    <option>ankle</option>
+                    <option>arm</option>
+                    <option>back</option>
+                    <option>belly</option>
+                    <option>blood</option>
+                    <option>brain</option>
+                    <option>breast</option>
+                    <option>chest</option>
+                    <option>circulatory system</option>
+                    <option>collar bone</option>
+                    <option>digestive system</option>
+                    <option>ear</option>
+                    <option>elbow</option>
+                    <option>endocrine system</option>
+                    <option>eye</option>
+                    <option>face</option>
+                    <option>feet</option>
+                    <option>finger</option>
+                    <option>foot</option>
+                    <option>hand</option>
+                    <option>head</option>
+                    <option>heart</option>
+                    <option>immune system</option>
+                    <option>kidney</option>
+                    <option>leg</option>
+                    <option>lungs</option>
+                    <option>liver</option>
+                    <option>neck</option>
+                    <option>nerves</option>
+                    <option>pancreas</option>
+                    <option>respiratory system</option>
+                    <option>shoulder</option>
+                    <option>spinal cord</option>
+                    <option>skull</option>
+                    <option>skin</option>
+                    <option>stomach</option>
+                    <option>tongue</option>
+                    <option>urinary system</option>
+                    <option>uterus</option>
+                    <option>wrist</option>
+                </select>
+            </div>
+            <div class="col">
+                <label style="display: block;margin-bottom: 0;">Severity: </label>
+                <select class="sitesDropDown" id="bleedingSeverity">
+                    <option>Select</option>
+                    <option> Mild</option>
+                    <option> Moderate</option>
+                    <option>Severe</option>
+                </select>
+            </div>
+        </div>
+</section>
+<!--end of Signs-->
+
+
+<!--Symptoms-->
+<section>
+    <div style="background-color:#39345a">
+        <h4 style="color:white ;margin-left:20px">Symptoms:</h4>
+    </div>
+    <div style="margin-left: 20px;" class="row">
+        <div class="col">
+            <input type="checkbox" value="Nausea" name="symptoms"/> Nausea <br/>
+            <input type="checkbox" value="Vomiting" name="symptoms"/> Vomiting<br/>
+            <input type="checkbox" value="Diarrhea" name="symptoms"/> Diarrhea<br/>
+            <input type="checkbox" value="Cough" name="symptoms"/> Cough<br/>
+        </div>
+        <div class="col">
+            <input type="checkbox" value="Breathless" name="symptoms"/> Breathless<br/>
+            <input type="checkbox" value="Faint" name="symptoms"/> Faint<br/>
+            <input type="checkbox" value="Pale" name="symptoms"/> Pale<br/>
+            <input type="checkbox" value="Blue" name="symptoms"/> Blue<br/>
+        </div>
+        <div class="col">
+            <input type="checkbox" value="Flushed" name="symptoms"/> Flushed<br/>
+            <input type="checkbox" value="Fever" name="symptoms"/> Fever<br/>
+            <input type="checkbox" value="Cold" name="symptoms"/> Cold<br/>
+            <input type="checkbox" value="Dizzy" name="symptoms"/> Dizzy<br/>
+        </div>
+        <div class="col">
+            <input type="checkbox" value="Weakness" name="symptoms"/> Weakness<br/>
+            <input type="checkbox" value="Convulsion" name="symptoms"/> Convulsion<br/>
+            <input type="checkbox" value="Aggressive" name="symptoms"/> Aggressive<br/>
+        </div>
+    </div>
+</section>
+<!--End of Syptoms-->
+
+<!--Diagnosis-->
+<section>
+    <div style="background-color:#39345a">
+        <h4 style="color:white ;margin-left:20px">Diagnosis:</h4>
+    </div>
+    <div style="margin:20px;">
+        <label style="display: block;">Diagnosis:</label>
+        <textarea class="form-control" rows="5" id="diagnosis"></textarea>
+    </div>
+    <div style="background-color:#39345a">
+        <h4 style="color:white ;margin-left:20px">Tests, Medications and Transfer Requirements:</h4>
+    </div>
+    <div style="margin:20px;">
+        <label style="display: block;">Request blood test:</label>
+        <select id="bloodTestSelection" multiple="">
+            <option disabled="">Select</option>
+            <option>Complete Blood Count</option>
+            <option>Prothrombin Time</option>
+            <option>Basic Metabolic Panel</option>
+            <option>Comprehensive Metabolic Panel</option>
+            <option>Lipid Panel</option>
+            <option>Liver Panel</option>
+            <option>Thyroid Stimulating Hormone</option>
+            <option>Hemoglobin A1C</option>
+            <option>Urinalysis</option>
+        </select>
+        <br>
+
+        <!-- <div
+           class="chosen-container chosen-container-multi"
+           title=""
+           id="Testselect_chosen"
+           style="width: 220px;"
+         >
+           <ul class="chosen-choices">
+             <li class="search-field">
+               <input
+                 class="chosen-search-input default"
+                 type="text"
+                 autocomplete="off"
+                 value="Select Some Options"
+                 style="width: 147.125px;"
+               />
+             </li>
+           </ul>
+           <div class="chosen-drop">
+             <ul class="chosen-results">
+               <li class="disabled-result" data-option-array-index="0">
+                 Select
+               </li>
+               <li class="active-result" data-option-array-index="1">
+                 Complete Blood Count
+               </li>
+               <li class="active-result" data-option-array-index="2">
+                 Prothrombin Time
+               </li>
+               <li class="active-result" data-option-array-index="3">
+                 Basic Metabolic Panel
+               </li>
+               <li class="active-result" data-option-array-index="4">
+                 Comprehensive Metabolic Panel
+               </li>
+               <li class="active-result" data-option-array-index="5">
+                 Lipid Panel
+               </li>
+               <li class="active-result" data-option-array-index="6">
+                 Liver Panel
+               </li>
+               <li class="active-result" data-option-array-index="7">
+                 Thyroid Stimulating Hormone
+               </li>
+               <li class="active-result" data-option-array-index="8">
+                 Hemoglobin A1C
+               </li>
+               <li class="active-result" data-option-array-index="9">
+                 Urinalysis
+               </li>
+             </ul>
+           </div>
+         </div>-->
+        <br>
+        <label style="display: block;">Request scans:</label>
+        <select id="scanSelection" multiple="">
+            <option disabled="">Select</option>
+            <option>MRI</option>
+            <option>CT</option>
+            <option>PET/CT</option>
+            <option>X-ray</option>
+            <option>Ultrasound</option>
+            <option>DEXA</option>
+            <option>Obstetrics/Gynecology</option>
+            <option>Flourscopy</option>
+            <option>Orthopaedics</option>
+            <option>Pediatrics</option>
+            <option>Physiotherapy</option>
+            <option>Radiology</option>
+            <option>Urology</option>
+        </select>
+        <br>
+        <br>
+
+        <label style="display: block;">Transfer to department:</label>
+        <select id="departmentSelection" multiple="">
+            <option disabled="">Select</option>
+            <option>Admissions</option>
+            <option>Breast Screening</option>
+            <option>Cardiology</option>
+            <option>Critical Care</option>
+            <option>Gynecology</option>
+            <option>Neonatal</option>
+            <option>Neurology</option>
+            <option>Obstetrics/Gynecology</option>
+            <option>Oncology</option>
+            <option>Orthopaedics</option>
+            <option>Pediatrics</option>
+            <option>Physiotherapy</option>
+            <option>Radiology</option>
+            <option>Urology</option>
+        </select>
+        <br>
+        <br>
+        <label style="display: block;">Medications:</label>
+        <select id="medicationSelection" multiple="">
+            <option disabled="">Select</option>
+            <option>Acetaminophen</option>
+            <option>Adderall</option>
+            <option>Alprazolam</option>
+            <option>Amitriptyline</option>
+            <option>Amlodipine</option>
+            <option>Amoxicillin</option>
+            <option>Citalopram</option>
+            <option>Clindamycin</option>
+            <option>Clonazepam</option>
+            <option>Cymbalta</option>
+            <option>Doxycycline</option>
+            <option>Gabapentin</option>
+            <option>Hydrochlorothiazide</option>
+            <option>Ibuprofen</option>
+            <option>Lexapro</option>
+            <option>Lyrica</option>
+            <option>Metformin</option>
+            <option>Naproxen</option>
+            <option>Pantoprazole</option>
+            <option>Panadol</option>
+            <option>Trazodone</option>
+            <option>Wellbutrin</option>
+            <option>Zoloft</option>
+        </select>
+    </div>
+</section>
+<!--end of diagnosis-->
+
+<!--<input type="submit" value="Submit" class="btn btn-primary addRecord" style="text-align: center;margin: 0 auto;"-->
+<!--       onclick="add();">-->
+
+<div style="text-align: center; margin-bottom: 50px">
+    <button class="btn btn-primary addRecord" onclick="add();">Add Record</button>
+</div>
+
+
+<!--footer-->
+<footer
+        class="ftco-footer ftco-bg-dark ftco-section img"
+        style="background-image: url(images/bg_5.jpg);padding: 25px;padding-bottom: 0;"
+>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row mb-5" style="margin: 0 !important;">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">RecoHealth</h2>
+                    <p>Your Privacy, Our Priority</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Site Links</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="py-2 d-block">Home</a></li>
+                        <li><a href="#" class="py-2 d-block">About Us</a></li>
+                        <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Have a Questions?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li>
+                    <span class="icon icon-map-marker"></span
+                    ><span class="text"
+                            >Block 5, Al Burooj Street, Al Soufouh, Dubai</span
+                            >
+                            </li>
+                            <li>
+                                <a href="#"
+                                ><span class="icon icon-phone"></span
+                                ><span class="text">+971 58 596 5669</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href="#"
+                                ><span class="icon icon-envelope"></span
+                                ><span class="text">mfawazsiddiqi@gmail.com</span></a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center"></div>
+        </div>
+    </div>
+</footer>
+<!--end of footer-->
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle
+                class="path-bg"
+                cx="24"
+                cy="24"
+                r="22"
+                fill="none"
+                stroke-width="4"
+                stroke="#eeeeee"
+        />
+        <circle
+                class="path"
+                cx="24"
+                cy="24"
+                r="22"
+                fill="none"
+                stroke-width="4"
+                stroke-miterlimit="10"
+                stroke="#F96D00"
+        />
+    </svg>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./js/chosen.jquery.min.js"></script>
+
+
+</body>
+</html>

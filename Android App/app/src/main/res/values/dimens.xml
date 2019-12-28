@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="edittextwidth">320dp</dimen>
+    <dimen name="edittextheight">40dp</dimen>
+    <dimen name="buttonwidth">200dp</dimen>
+    <dimen name="buttonheight">40dp</dimen>
+    <dimen name="drawablepadding">5dp</dimen>
+</resources>

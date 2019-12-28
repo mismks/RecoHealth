@@ -1,0 +1,36 @@
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+}
+
+th {
+    background-color: #39345a;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+td {
+    display: inline-block;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+td:nth-child(1) {
+    width: 120px;
+}
+
+td:nth-child(2) {
+    width: 50%;
+}
+
+.field {
+    font-weight: bold;
+    text-transform: capitalize;
+
+}

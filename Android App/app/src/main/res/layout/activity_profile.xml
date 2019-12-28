@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/liteblue"
+    tools:context=".ProfileActivity">
+
+    <ImageView
+        android:id="@+id/logoimage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+
+        android:src="@drawable/backlogo" />
+
+    <ImageView
+        android:id="@+id/personpic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="170dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/patientname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="170dp"
+        android:layout_toRightOf="@+id/personpic"
+        android:text="Patint Name"
+        android:textColor="@color/logocolor"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/patientID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/patientname"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/personpic"
+        android:text="Patient ID"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/patientemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/patientID"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/personpic"
+        android:text="Email"
+        android:textSize="15dp" />
+
+
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/patientemail"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Age: "
+                android:textColor="@color/logocolor"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/PatientAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="47" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="DOB: "
+                android:textColor="@color/logocolor"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Gender: "
+                android:textColor="@color/logocolor"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/Gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Blood Group: "
+                android:textColor="@color/logocolor"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/blodgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A+" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Allergies: "
+                android:textColor="@color/logocolor"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/alergies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Anapx" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Regular Medications: "
+                android:textColor="@color/logocolor"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/medication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="to be updated by doctor" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Chronic Disease: "
+                android:textColor="@color/logocolor"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/chronicdesise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chronic" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

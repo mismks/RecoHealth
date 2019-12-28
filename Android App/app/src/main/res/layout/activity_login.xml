@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/liteblue"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/logoimg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/backlogo" />
+
+    <TextView
+        android:id="@+id/logindescrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoimg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Login into your account"
+        android:textColor="@color/logocolor"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/donthaveaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logindescrip"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="10dp"
+        android:text="Don't have an account?" />
+
+    <TextView
+        android:id="@+id/signupp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logindescrip"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/donthaveaccount"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textAlignment="center"
+        android:textColor="@color/logocolor"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/emailinput"
+        android:layout_width="@dimen/edittextwidth"
+        android:layout_height="@dimen/edittextheight"
+        android:layout_below="@+id/donthaveaccount"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/logocolor"
+        android:drawableLeft="@drawable/email"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Enter Your Username"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp" />
+
+
+    <EditText
+        android:id="@+id/typepassword"
+        android:layout_width="@dimen/edittextwidth"
+        android:layout_height="@dimen/edittextheight"
+        android:layout_below="@+id/emailinput"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/logocolor"
+        android:drawableLeft="@drawable/lock"
+        android:drawablePadding="5dp"
+        android:hint="Type Your Password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/forgotpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/typepassword"
+        android:layout_marginStart="240dp"
+        android:layout_marginEnd="0dp"
+        android:gravity="center"
+        android:text="Forgot Password?"
+        android:textColor="@color/logocolor"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/loginaccount"
+        android:layout_width="@dimen/buttonwidth"
+        android:layout_height="@dimen/buttonheight"
+        android:layout_below="@+id/forgotpass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/butondesign"
+        android:text="Login"
+        android:textSize="17dp" />
+
+
+</RelativeLayout>
